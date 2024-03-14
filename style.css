@@ -36,12 +36,12 @@ body{
 }
 
 .botao{
-    font-family:"Crackr",sans-serif;
+    font-family:"Crackr" , sans-serif;
     background-color: var(--botao-inativo);
     color: var(--branco);
     display: flex;
     justify-content: center;
-    padding: lem;
+    padding: 1em;
     font-size: 18px;
     align-items: center;
     width: 100%;
