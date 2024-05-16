@@ -44,7 +44,7 @@ const tempos = [tempoObjetivo1,tempoObjetivo2,tempoObjetivo3,tempoObjetivo4];
 
 function atualizaCronometro(){
     for (let i=0; i<contadores.length;i++){
-        contadores[i].textContent = cauculaTempo(tempos[i])
+        contadores[i].textContent = cauculaTempo(tempos[i]);
     }
 }
 function comecaCronometro(){
