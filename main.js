@@ -30,7 +30,7 @@ function atualizaCronometro(){
 atualizaCronometro();
 setInterval(atualizaCronometro(),1000)
 
-function calculaTempo(tempoObjetivo) {
+    function calculaTempo(tempoObjetivo) {
     let tempoAtual = new Date();
     let tempoFinal = tempoObjetivo - tempoAtual;
     let segundos = Math.floor(tempoFinal / 1000);
@@ -41,6 +41,22 @@ function calculaTempo(tempoObjetivo) {
     segundos %= 60;
     minutos %= 60;
     horas %= 24;
- 
- return dias + " dias " + horas + " horas " + minutos + " minutos " + segundos + " segundos";
+    if (tempoFinal > 0){
+        return dias + " dias " + horas + " horas " + minutos + " minutos " + segundos + " segundos";
+    }else {
+        return"Prazo finlizado";
+    }
+    }
+
+function atualizaCronometro(){
+    for (let i=0; i<contadores.length;i++){
+        contadores[i].textContent = cauculaTempo(tempos[i])
+    }
 }
+function comecaCronometro(){
+atualizaCronometro();
+setInterval(atualizaCronometro(),1000)
+}
+
+comecaCronometro();
+
